@@ -18,6 +18,9 @@ Write a function named isComplete that returns 1 if its array argument is a comp
 If you are writing in Java or C#, the function signature is
 int isComplete (int[ ] a) */
 
+// How to create a new Array
+// ArrayList<Integer> prime = new ArrayList<Integer>();
+
 public class IsComplete {
   public static void main(String[] arg) {
       int[] arr1 = {-5, 6, 2, 3, 2, 4, 5, 11, 8, 7};
@@ -33,8 +36,8 @@ public class IsComplete {
   }
 
   public static int isComplete(int[] arr) {
-      int minEven = Integer.MAX_VALUE;
-      int maxEven = Integer.MIN_VALUE;
+      int minEven = Integer.MIN_VALUE;
+      int maxEven = Integer.MAX_VALUE;
       boolean evenNumberFound = false;
 
       // Iterate through the array to find min and max even numbers
@@ -72,4 +75,65 @@ public class IsComplete {
       // If all conditions met, array is complete
       return 1;
   }
+
+//   public static int isComplete2(int[] a) {
+//     // check for even exists
+//     // get min and max, check they are not equal and check if all numbers between
+//     // min and max exists
+//     boolean evenFound = false;
+//     int min = 0;
+//     int max = 0;
+//     for (int i = 0; i < a.length; i++) {
+
+//         if (a[i] % 2 == 0) {
+//             if (!evenFound) {
+//                 min = a[i];
+//                 max = a[i];
+//                 evenFound = true;
+//             }
+
+//             // min = Math.min(min, i);
+//             if (a[i] < min) {
+//                 min = a[i];
+//             }
+//             // max = Math.max(max, i);
+//             if (a[i] > max) {
+//                 max = a[i];
+//             }
+//         }
+
+//     }
+
+//     if (!evenFound || min == max) {
+//         return 0;
+//     }
+
+//     ArrayList<Integer> allNumbers = new ArrayList<Integer>();
+//     for (int i = min; i <= max; i++) {
+//         allNumbers.add(i);
+//     }
+
+//     // iterate the array and check if all numbers exist
+//     boolean numberFound = false;
+//     for (int num : allNumbers) {
+//         for (int i = 0; i < a.length; i++) {
+//             if (a[i] == num) {
+//                 numberFound = true;
+//             }
+//         }
+//         if (!numberFound) {
+//             System.out.println("failed" + num);
+//             return 0;
+//         }
+//     }
+
+//     return 1;
+
+// }
+
+// public static void main(String args[]) {
+//     int a[] = { -20, 6, 2, 3, 2, 4, 5, 11, 8, 7 };
+//     System.out.println(isComplete(a));
+// }
+
 }
