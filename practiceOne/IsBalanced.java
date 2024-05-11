@@ -19,7 +19,7 @@ public class IsBalanced {
       System.out.println(isBalanced(arr2)); // Output: 1
       System.out.println(isBalanced(arr3)); // Output: 0
       System.out.println(isBalanced(arr4)); // Output: 0
-      System.out.println(isBalanced(arr5)); // Output: 0
+      System.out.println(isBalanced(arr5)); // Output: 1
     }
 
 
